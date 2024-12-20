@@ -8,7 +8,8 @@ pipe = pipeline(
 )
 
 
-def is_a_question(query, pipe):
+def is_a_question(query, pipe=pipe):
     result = pipe(query)
+    label = result[0]["label"]
 
-    return result
+    return label == "LABEL_1"
