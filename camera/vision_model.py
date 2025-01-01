@@ -1,3 +1,4 @@
+import logging
 from transformers import (
     Qwen2VLForConditionalGeneration,
     AutoProcessor,
@@ -8,12 +9,20 @@ import torch
 import warnings
 
 warnings.filterwarnings("ignore")
+logging.basicConfig(level=logging.INFO)
 
 
 def read_sys_prompt(file_path):
     """Read the system prompt from a file."""
-    with open(file_path, "r") as file:
-        return file.read()
+    try:
+        with open(file_path, "r") as file:
+            return file.read()
+    except FileNotFoundError:
+        logging.error(f"File not found at: {file_path}")
+        raise
+    except Exception as e:
+        logging.error(f"An error occurred while reading the system prompt: {e}")
+        raise
 
 
 def init_model():
@@ -25,28 +34,36 @@ def init_model():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Load the model with 8-bit precision
-    model = Qwen2VLForConditionalGeneration.from_pretrained(
-        "Qwen/Qwen2-VL-2B-Instruct",
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
-        quantization_config=bnb_config,
-    )
+    try:
+        model = Qwen2VLForConditionalGeneration.from_pretrained(
+            "Qwen/Qwen2-VL-2B-Instruct",
+            torch_dtype=torch.bfloat16,
+            device_map="auto",
+            quantization_config=bnb_config,
+        )
+    except Exception as e:
+        logging.error(f"An error occurred while initializing the model: {e}")
+        raise
 
     # Set pixel constraints
     min_pixels = 256 * 28 * 28
     max_pixels = 1280 * 28 * 28
 
     # Load the processor
-    processor = AutoProcessor.from_pretrained(
-        "Qwen/Qwen2-VL-7B-Instruct",
-        min_pixels=min_pixels,
-        max_pixels=max_pixels,
-    )
+    try:
+        processor = AutoProcessor.from_pretrained(
+            "Qwen/Qwen2-VL-7B-Instruct",
+            min_pixels=min_pixels,
+            max_pixels=max_pixels,
+        )
+    except Exception as e:
+        logging.error(f"An error occurred while initializing the processor: {e}")
+        raise
 
     return model, processor, device
 
 
-def get_llm_out(model, processor, device, sys_prompt, image, text):
+def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
     """Generate LLM output based on the image and text."""
     messages = [
         {"role": "system", "content": sys_prompt},
@@ -93,8 +110,9 @@ def get_llm_out(model, processor, device, sys_prompt, image, text):
             generated_ids_trimmed,
             skip_special_tokens=True,
             clean_up_tokenization_spaces=False,
-        )
+        )[0]
     except Exception as e:
+        logging.error(f"An error occurred with LLM: {e}")
         return f"An error has occurred with LLM: {e}"
 
     return output_text

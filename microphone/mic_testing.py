@@ -1,5 +1,8 @@
 from is_a_question import is_a_question
 from microphone_live import live_speech_to_text
+import warnings
+
+warnings.filterwarnings("ignore")
 
 
 def main():

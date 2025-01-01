@@ -1,5 +1,7 @@
-# Use a pipeline as a high-level helper
+import logging
 from transformers import pipeline
+
+logging.basicConfig(level=logging.INFO)
 
 pipe = pipeline(
     "text-classification",
@@ -8,8 +10,11 @@ pipe = pipeline(
 )
 
 
-def is_a_question(query, pipe=pipe):
-    result = pipe(query)
-    label = result[0]["label"]
-
-    return label == "LABEL_1"
+def is_a_question(query: str, pipe=pipe) -> bool:
+    try:
+        result = pipe(query)
+        label = result[0]["label"]
+        return label == "LABEL_1"
+    except Exception as e:
+        logging.error(f"An error occurred while classifying the text: {e}")
+        return False

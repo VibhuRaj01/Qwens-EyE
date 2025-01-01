@@ -68,5 +68,5 @@ def start_live_feed(image_folder_path=image_folder, system_prompt_path=sys_promp
         cv2.destroyAllWindows()
 
 
-# if __name__ == "__main__":
-#     start_live_feed()
+if __name__ == "__main__":
+    start_live_feed()
