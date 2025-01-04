@@ -3,15 +3,13 @@ import os
 import sys
 from vision_model import read_sys_prompt, init_model, get_llm_out
 
-sys_prompt_path = (
-    "/home/bibu/Projects/VideoDescription/Video-Description/system_prompt.txt"
-)
+sys_prompt_path = r"D:\Project\Video-Description\ai_modules\system_prompt.txt"
 
-image_folder = "/home/bibu/Projects/VideoDescription/Video-Description/images"
+image_folder = r"D:\Project\Video-Description\ai_modules\images"
 
 
 def start_live_feed(image_folder_path=image_folder, system_prompt_path=sys_prompt_path):
-    # check directories
+    # check diresmilctories
     if not os.path.exists(image_folder_path):
         raise FileNotFoundError(f"Folder not found at: {image_folder_path}")
     if not os.path.exists(system_prompt_path):
@@ -53,7 +51,7 @@ def start_live_feed(image_folder_path=image_folder, system_prompt_path=sys_promp
                 print(f"Saved frame to {image_path}")
 
                 # Send the image path and the text to get_llm_out
-                text = "describe the image"
+                text = "What's written in this image?"
                 response = get_llm_out(
                     model, processor, device, sys_prompt, image_path, text
                 )

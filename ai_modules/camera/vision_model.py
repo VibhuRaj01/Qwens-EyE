@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 def read_sys_prompt(file_path):
     """Read the system prompt from a file."""
     try:
-        with open(file_path, "r") as file:
+        with open(file_path, encoding="utf8") as file:
             return file.read()
     except FileNotFoundError:
         logging.error(f"File not found at: {file_path}")
@@ -27,20 +27,24 @@ def read_sys_prompt(file_path):
 
 def init_model():
     """Initialize the model and processor."""
-    # Create the config for loading the model in 8-bit precision
-    bnb_config = BitsAndBytesConfig(load_in_8bit=True)
-
     # Determine the device
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"The device in use is : {device}")
 
+    bnb_config = BitsAndBytesConfig(load_in_8bit=True)
     # Load the model with 8-bit precision
     try:
         model = Qwen2VLForConditionalGeneration.from_pretrained(
-            "Qwen/Qwen2-VL-2B-Instruct",
+            "Qwen/Qwen2-VL-7B-Instruct",
             torch_dtype=torch.bfloat16,
             device_map="auto",
             quantization_config=bnb_config,
         )
+    # try:
+    #     model = Qwen2VLForConditionalGeneration.from_pretrained(
+    #         "Qwen/Qwen2-VL-2B-Instruct",
+    #         device_map="auto"
+    #     )
     except Exception as e:
         logging.error(f"An error occurred while initializing the model: {e}")
         raise
@@ -122,7 +126,7 @@ def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
 # if __name__ == "__main__":
 #     # Read the system prompt
 #     sys_prompt = read_sys_prompt(
-#         "/home/bibu/Projects/VideoDescription/Video-Description/system_prompt.txt"
+#         "D:\Project\Video-Description\system_prompt.txt"
 #     )
 
 #     # Initialize the model and processor

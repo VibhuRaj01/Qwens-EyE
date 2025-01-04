@@ -2,16 +2,13 @@ import cv2
 import os
 import sys
 import logging
-from camera.vision_model import read_sys_prompt, init_model, get_llm_out
-from microphone.is_a_question import is_a_question
-from microphone.microphone_live import live_speech_to_text
+from ai_modules.camera.vision_model import read_sys_prompt, init_model, get_llm_out
+from ai_modules.microphone.microphone_live import live_speech_to_text
 
 logging.basicConfig(level=logging.INFO)
 
-sys_prompt_path = (
-    "/home/bibu/Projects/VideoDescription/Video-Description/system_prompt.txt"
-)
-image_folder = "/home/bibu/Projects/VideoDescription/Video-Description/images"
+sys_prompt_path = "D:\Project\Video-Description\ai_modules\system_prompt.txt"
+image_folder = "D:\Project\Video-Description\ai_modules\images"
 
 
 def check_directories(image_folder_path: str, system_prompt_path: str):
@@ -46,16 +43,15 @@ def capture_and_process_frame(
     cv2.imshow("Live Feed", frame)
 
     text = live_speech_to_text()
-    if is_a_question(text) and text != "Could not understand the audio":
-        logging.info(f"Question detected!\nThe question is: {text}")
+    logging.info(f"Question detected!\nThe question is: {text}")
 
-        frame_count += 1
-        image_path = os.path.join(image_folder_path, f"frame_{frame_count}.png")
-        cv2.imwrite(image_path, frame)
-        logging.info(f"Saved frame to {image_path}")
+    frame_count += 1
+    image_path = os.path.join(image_folder_path, f"frame_{frame_count}.png")
+    cv2.imwrite(image_path, frame)
+    logging.info(f"Saved frame to {image_path}")
 
-        response = get_llm_out(model, processor, device, sys_prompt, image_path, text)
-        logging.info(f"Response from get_llm_out: {response}")
+    response = get_llm_out(model, processor, device, sys_prompt, image_path, text)
+    logging.info(f"Response from get_llm_out: {response}")
 
     return frame_count, frame
 

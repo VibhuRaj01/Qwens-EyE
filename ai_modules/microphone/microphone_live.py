@@ -5,6 +5,9 @@ import torch
 from transformers import pipeline
 from pynput import keyboard
 
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
 # Initialize the Whisper ASR pipeline
 try:
     whisper = pipeline(
@@ -16,7 +19,6 @@ try:
 except Exception as e:
     logging.error(f"An error occurred while initializing the Whisper pipeline: {e}")
     raise
-
 
 def live_speech_to_text():
     FORMAT = pyaudio.paInt16
@@ -39,23 +41,26 @@ def live_speech_to_text():
         logging.error(f"An error occurred while opening the audio stream: {e}")
         return "Could not understand the audio"
 
-    logging.info("Press 's' to start/stop recording...")
+    logging.info("Press 'a' to start/stop recording...")
+    logging.info("Press 'q' to quit...")
 
     recording = False
     frames = []
+    transcription_result = ""
 
     def on_press(key):
-        nonlocal recording, frames
+        nonlocal recording, frames, transcription_result
         try:
             if key.char == "q":
-                return "Good day"
+                logging.info("Exiting...")
+                listener.stop()
+                return False  # Stop the listener
 
-            if key.char == "s":
+            if key.char == "a":
                 if not recording:
                     logging.info("Recording started.")
                     recording = True
                     frames = []  # Clear previous frames
-
                 else:
                     logging.info("Recording stopped.")
                     recording = False
@@ -72,7 +77,7 @@ def live_speech_to_text():
 
                     if text:
                         logging.info(f"Transcription: {text}")
-                        return text
+                        transcription_result = text
         except AttributeError:
             pass  # Ignore special keys
 
@@ -89,9 +94,10 @@ def live_speech_to_text():
         logging.info("\nStopped by user.")
     finally:
         listener.stop()
+        listener.join()
         if stream:
             stream.stop_stream()
             stream.close()
         audio.terminate()
 
-    return "Could not understand the audio"
+    return transcription_result if transcription_result else "Could not understand the audio"
