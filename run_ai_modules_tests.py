@@ -5,10 +5,16 @@ import logging
 from ai_modules.camera.vision_model import read_sys_prompt, init_model, get_llm_out
 from ai_modules.microphone.microphone_live import live_speech_to_text
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+                    filename="Logs",
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    datefmt='%H:%M:%S',
+                    level=logging.INFO
+                    )
 
-sys_prompt_path = "D:\Project\Video-Description\ai_modules\system_prompt.txt"
-image_folder = "D:\Project\Video-Description\ai_modules\images"
+sys_prompt_path = "D:\Project\Video-Description\system_prompt.txt"
+image_folder = "D:/Project/Video-Description/ai_modules/images"
 
 
 def check_directories(image_folder_path: str, system_prompt_path: str):
@@ -43,7 +49,6 @@ def capture_and_process_frame(
     cv2.imshow("Live Feed", frame)
 
     text = live_speech_to_text()
-    logging.info(f"Question detected!\nThe question is: {text}")
 
     frame_count += 1
     image_path = os.path.join(image_folder_path, f"frame_{frame_count}.png")
@@ -60,9 +65,7 @@ def start_live_feed_with_speech(
     image_folder_path: str = image_folder, system_prompt_path: str = sys_prompt_path
 ):
     check_directories(image_folder_path, system_prompt_path)
-    model, processor, device, sys_prompt = initialize_model_and_prompt(
-        system_prompt_path
-    )
+    model, processor, device, sys_prompt = initialize_model_and_prompt(system_prompt_path)
     os.makedirs(image_folder_path, exist_ok=True)
 
     cap = cv2.VideoCapture(0)
@@ -72,28 +75,49 @@ def start_live_feed_with_speech(
         sys.exit("Error: Could not open video capture.")
 
     frame_count = 0
+    recording = False  # Track the recording state
 
     logging.info("Listening for speech...")
 
     try:
         while True:
-            frame_count, frame = capture_and_process_frame(
-                cap,
-                image_folder_path,
-                frame_count,
-                model,
-                processor,
-                device,
-                sys_prompt,
-            )
+            ret, frame = cap.read()
+            if not ret:
+                logging.error("Error: Frame not captured correctly. Retrying...")
+                continue  # Skip this iteration if the frame is not captured
 
-            # Check if the 'Q' key is pressed to quit
+            cv2.imshow("Live Feed", frame)
+
+            # Handle 'A' key for capture/recording
             key = cv2.waitKey(1) & 0xFF
+            if key == ord("a"):
+                if not recording:
+                    # Start recording
+                    logging.info("Recording started...")
+                    recording = True
+                else:
+                    # Stop recording and process inputs
+                    logging.info("Recording stopped. Processing inputs...")
+                    frame_count, frame = capture_and_process_frame(
+                        cap,
+                        image_folder_path,
+                        frame_count,
+                        model,
+                        processor,
+                        device,
+                        sys_prompt,
+                    )
+                    recording = False
+
+            # Exit if 'Q' key is pressed
             if key == ord("q"):
+                logging.info("Exiting application...")
                 break
     finally:
         cap.release()
         cv2.destroyAllWindows()
+        logging.info("Released resources and closed all windows.")
+
 
 
 if __name__ == "__main__":

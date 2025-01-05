@@ -2,19 +2,36 @@ import logging
 import pyaudio
 import numpy as np
 import torch
-from transformers import pipeline
+from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 from pynput import keyboard
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+                    filename="Logs",
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    datefmt='%H:%M:%S',
+                    level=logging.INFO
+                    )
+
+device="cuda" if torch.cuda.is_available() else "cpu"
+torch_dtype = torch.float16 if torch.cuda.is_available() else torch.float32
+model_id = "openai/whisper-large-v3-turbo"
 
 # Initialize the Whisper ASR pipeline
 try:
+    model = AutoModelForSpeechSeq2Seq.from_pretrained(
+    model_id, torch_dtype=torch_dtype, low_cpu_mem_usage=True, use_safetensors=True
+    )
+    model.to(device)
+    processor = AutoProcessor.from_pretrained(model_id)
     whisper = pipeline(
         "automatic-speech-recognition",
-        "openai/whisper-large-v3-turbo",
-        torch_dtype=torch.float16,
-        device="cuda:0" if torch.cuda.is_available() else "cpu",
+        model=model,
+        tokenizer=processor.tokenizer,
+        feature_extractor=processor.feature_extractor,
+        torch_dtype=torch_dtype,
+        device=device,
     )
 except Exception as e:
     logging.error(f"An error occurred while initializing the Whisper pipeline: {e}")

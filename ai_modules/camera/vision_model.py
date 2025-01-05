@@ -1,4 +1,5 @@
 import logging
+import os
 from transformers import (
     Qwen2VLForConditionalGeneration,
     AutoProcessor,
@@ -9,7 +10,13 @@ import torch
 import warnings
 
 warnings.filterwarnings("ignore")
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+                    filename="Logs",
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                    datefmt='%H:%M:%S',
+                    level=logging.INFO
+                    )
 
 
 def read_sys_prompt(file_path):
@@ -35,8 +42,8 @@ def init_model():
     # Load the model with 8-bit precision
     try:
         model = Qwen2VLForConditionalGeneration.from_pretrained(
-            "Qwen/Qwen2-VL-7B-Instruct",
-            torch_dtype=torch.bfloat16,
+            "Qwen/Qwen2-VL-2B-Instruct",
+            torch_dtype="auto",
             device_map="auto",
             quantization_config=bnb_config,
         )
@@ -69,6 +76,10 @@ def init_model():
 
 def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
     """Generate LLM output based on the image and text."""
+    if not os.path.exists(image):
+        logging.error(f"Image file does not exist: {image}")
+        return "Image file not found."
+    
     messages = [
         {"role": "system", "content": sys_prompt},
         {
@@ -83,27 +94,27 @@ def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
         },
     ]
 
-    # Process the text using the processor
-    text = processor.apply_chat_template(
-        messages, tokenize=False, add_generation_prompt=True
-    )
-
-    # Process the vision info
-    image_inputs, video_inputs = process_vision_info(messages)
-
-    # Prepare inputs for the model
-    inputs = processor(
-        text=[text],
-        images=image_inputs,
-        videos=video_inputs,
-        padding=True,
-        return_tensors="pt",
-    )
-
-    # Move inputs to the correct device
-    inputs = inputs.to(device)
-
     try:
+        # Process the text using the processor
+        text = processor.apply_chat_template(
+            messages, tokenize=False, add_generation_prompt=True
+        )
+
+        # Process the vision info
+        image_inputs, video_inputs = process_vision_info(messages)
+
+        # Prepare inputs for the model
+        inputs = processor(
+            text=[text],
+            images=image_inputs,
+            videos=video_inputs,
+            padding=True,
+            return_tensors="pt",
+        )
+
+        # Move inputs to the correct device
+        inputs = inputs.to(device)
+
         # Generate predictions
         generated_ids = model.generate(**inputs, max_new_tokens=128)
         generated_ids_trimmed = [
@@ -138,7 +149,7 @@ def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
 #         processor,
 #         device,
 #         sys_prompt,
-#         r"/home/bibu/Downloads/chill guy.jpg",
-#         "Describe the guy only, not the surroundings!",
+#         r"C:\Users\vibhu\Downloads\wallpapers\wp12796311-porsche-911-gt3-rs-4k-wallpapers.jpg",
+#         "Do you see a car in this image?",
 #     )
 #     print(result)
