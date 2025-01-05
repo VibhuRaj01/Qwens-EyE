@@ -8,7 +8,7 @@ image_folder = r"D:\Project\Video-Description\ai_modules\images"
 
 
 def start_live_feed(image_folder_path=image_folder, system_prompt_path=sys_prompt_path):
-    # check diresmilctories
+    # check directories
     if not os.path.exists(image_folder_path):
         raise FileNotFoundError(f"Folder not found at: {image_folder_path}")
     if not os.path.exists(system_prompt_path):
