@@ -2,35 +2,37 @@ import cv2
 import os
 import sys
 import logging
+from RealtimeSTT import AudioToTextRecorder
 from ai_modules.camera.vision_model import read_sys_prompt, init_model, get_llm_out
-from ai_modules.microphone.microphone_live import live_speech_to_text
+# from ai_modules.microphone.AudiotoText import get_transcribed_text
 
 logging.basicConfig(
-                    filename="Logs",
-                    filemode='a',
-                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
-                    level=logging.INFO
-                    )
+    filename="Logs",
+    filemode='a',
+    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+    datefmt='%H:%M:%S',
+    level=logging.INFO
+)
 
 sys_prompt_path = "D:\Project\Video-Description\system_prompt.txt"
 image_folder = "D:/Project/Video-Description/ai_modules/images"
 
-
 def check_directories(image_folder_path: str, system_prompt_path: str):
+    logging.info(f"Checking directories: {image_folder_path}, {system_prompt_path}")
     if not os.path.exists(image_folder_path):
         logging.error(f"Folder not found at: {image_folder_path}")
         raise FileNotFoundError(f"Folder not found at: {image_folder_path}")
     if not os.path.exists(system_prompt_path):
         logging.error(f"File not found at: {system_prompt_path}")
         raise FileNotFoundError(f"File not found at: {system_prompt_path}")
-
+    logging.info("Directories checked successfully.")
 
 def initialize_model_and_prompt(system_prompt_path: str):
+    logging.info("Initializing model and prompt...")
     model, processor, device = init_model()
     sys_prompt = read_sys_prompt(system_prompt_path)
+    logging.info("Model and prompt initialized successfully.")
     return model, processor, device, sys_prompt
-
 
 def capture_and_process_frame(
     cap: cv2.VideoCapture,
@@ -41,6 +43,7 @@ def capture_and_process_frame(
     device,
     sys_prompt,
 ):
+    logging.info("Capturing and processing frame...")
     ret, frame = cap.read()
     if not ret:
         logging.error("Error: Failed to capture frame.")
@@ -48,22 +51,33 @@ def capture_and_process_frame(
 
     cv2.imshow("Live Feed", frame)
 
-    text = live_speech_to_text()
+    try:
+        text = get_transcribed_text()
+        logging.info(f"Transcribed text: {text}")
+    except Exception as e:
+        logging.error(f"Error in get_transcribed_text: {e}")
+        text = None
 
-    frame_count += 1
-    image_path = os.path.join(image_folder_path, f"frame_{frame_count}.png")
-    cv2.imwrite(image_path, frame)
-    logging.info(f"Saved frame to {image_path}")
+    if text:
+        frame_count += 1
+        image_path = os.path.join(image_folder_path, f"frame_{frame_count}.png")
+        cv2.imwrite(image_path, frame)
+        logging.info(f"Saved frame to {image_path}")
 
-    response = get_llm_out(model, processor, device, sys_prompt, image_path, text)
-    logging.info(f"Response from get_llm_out: {response}")
+        try:
+            response = get_llm_out(model, processor, device, sys_prompt, image_path, text)
+            logging.info(f"Response from get_llm_out: {response}")
+        except Exception as e:
+            logging.error(f"Error in get_llm_out: {e}")
+    else:
+        logging.warning("No transcribed text available.")
 
     return frame_count, frame
-
 
 def start_live_feed_with_speech(
     image_folder_path: str = image_folder, system_prompt_path: str = sys_prompt_path
 ):
+    logging.info("Starting live feed with speech...")
     check_directories(image_folder_path, system_prompt_path)
     model, processor, device, sys_prompt = initialize_model_and_prompt(system_prompt_path)
     os.makedirs(image_folder_path, exist_ok=True)
@@ -118,7 +132,21 @@ def start_live_feed_with_speech(
         cv2.destroyAllWindows()
         logging.info("Released resources and closed all windows.")
 
-
+def get_transcribed_text():
+    """
+    Returns the transcribed text from the AudioToTextRecorder.
+    """
+    logging.info("Initializing AudioToTextRecorder...")
+    print('Say "Jarvis" to start recording.')
+    try:
+        with AudioToTextRecorder(wake_words="jarvis") as recorder:
+            logging.info("Recorder started, waiting for wake word...")
+            text = recorder.text()
+            logging.info(f"Transcribed text from recorder: {text}")
+            return text
+    except Exception as e:
+        logging.error(f"Error in AudioToTextRecorder: {e}")
+        return None
 
 if __name__ == "__main__":
     start_live_feed_with_speech()
