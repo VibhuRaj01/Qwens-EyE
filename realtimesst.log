@@ -1,0 +1,1052 @@
+2025-01-05 20:05:55.276 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-05 20:05:55.292 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-05 20:05:55.307 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-05 20:05:55.307 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-05 20:05:55.323 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-05 20:05:58.868 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-05 20:05:58.891 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-05 20:05:58.909 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-05 20:05:58.932 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-05 20:05:58.932 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-05 20:05:58.962 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-05 20:05:58.962 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-05 20:05:58.962 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-05 20:05:59.109 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-05 20:05:59.115 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-05 20:05:59.115 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-05 20:06:04.606 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-05 20:06:04.606 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-05 20:06:04.606 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-05 20:06:04.606 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-05 20:06:04.612 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-05 20:06:04.616 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-05 20:06:06.929 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-05 20:06:08.850 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-05 20:06:08.850 - RealTimeSTT: root - INFO - recording started
+2025-01-05 20:06:08.850 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-05 20:06:08.850 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-05 20:06:10.000 - RealTimeSTT: root - INFO - recording stopped
+2025-01-05 20:06:10.000 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-05 20:06:10.089 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-05 20:06:10.089 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-05 20:06:10.099 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-05 20:06:10.130 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-05 20:06:10.486 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.40 seconds
+2025-01-05 20:08:22.043 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-05 20:08:22.060 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-05 20:08:22.060 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-05 20:08:22.060 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-05 20:08:22.060 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-05 20:08:22.561 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-05 20:08:22.655 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-05 20:08:22.655 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-05 20:08:22.655 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-05 20:08:25.187 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-05 20:08:25.187 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-05 20:08:25.187 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-05 20:08:25.187 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-05 20:08:25.187 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-05 20:08:25.203 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-05 20:08:35.188 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-05 20:08:37.744 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-05 20:08:37.744 - RealTimeSTT: root - INFO - recording started
+2025-01-05 20:08:37.744 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-05 20:08:37.744 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-05 20:08:39.161 - RealTimeSTT: root - INFO - recording stopped
+2025-01-05 20:08:39.161 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-05 20:08:39.192 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-05 20:08:39.192 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-05 20:08:39.208 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-05 20:08:39.208 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-05 20:08:39.746 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.55 seconds
+2025-01-05 20:08:39.746 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-05 20:08:39.746 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-05 20:08:39.746 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-05 20:08:39.798 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-05 20:08:41.716 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-05 20:08:42.869 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-05 20:08:42.869 - RealTimeSTT: root - INFO - recording started
+2025-01-05 20:08:42.869 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-05 20:08:42.869 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-05 20:08:45.167 - RealTimeSTT: root - INFO - recording stopped
+2025-01-05 20:08:45.167 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-05 20:08:45.269 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-05 20:08:45.269 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-05 20:08:45.285 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-05 20:08:45.303 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-05 20:08:45.544 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.28 seconds
+2025-01-05 20:08:45.544 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-05 20:08:45.544 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-05 20:08:45.544 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-05 20:08:45.555 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-05 20:08:55.024 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-05 20:08:56.433 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-05 20:08:56.433 - RealTimeSTT: root - INFO - recording started
+2025-01-05 20:08:56.433 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-05 20:08:56.433 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-05 20:08:58.286 - RealTimeSTT: root - INFO - recording stopped
+2025-01-05 20:08:58.286 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-05 20:08:58.390 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-05 20:08:58.390 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-05 20:08:58.405 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-05 20:08:58.422 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-05 20:08:58.634 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.24 seconds
+2025-01-05 20:08:58.634 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-05 20:08:58.634 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-05 20:08:58.634 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-05 20:08:58.681 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-05 20:09:04.119 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-05 20:09:04.119 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-05 20:09:04.134 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-05 20:09:04.494 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-05 20:09:04.577 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-05 20:09:04.633 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-01-07 11:05:31.149 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:05:31.175 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:05:31.204 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:05:31.204 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:05:31.204 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:05:31.911 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:05:31.937 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:05:31.959 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:05:31.986 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:05:31.986 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:05:32.014 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:05:32.014 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:05:32.014 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:05:32.149 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:05:32.150 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:05:32.150 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:05:34.471 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:05:34.472 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:05:34.472 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:05:34.472 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:05:34.474 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:05:34.532 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:05:49.372 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:05:54.370 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:07:07.334 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:07:09.437 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:07:09.437 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:07:09.437 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:07:09.437 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:07:11.044 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:07:11.044 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:07:11.124 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:07:11.125 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:07:11.125 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:07:11.174 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:07:11.665 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.54 seconds
+2025-01-07 11:07:11.665 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:07:11.665 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:07:11.665 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:07:11.681 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:07:16.535 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-07 11:07:16.535 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:07:16.541 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:07:16.621 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-01-07 11:07:16.981 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:07:17.062 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:07:17.121 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-01-07 11:10:40.342 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:10:40.361 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:10:40.365 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:10:40.365 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:10:40.365 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:10:40.948 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:10:40.950 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:10:40.950 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:10:40.951 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:10:40.952 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:10:40.952 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:10:40.953 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:10:40.953 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:10:41.070 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:10:41.072 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:10:41.072 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:10:43.350 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:10:43.351 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:10:43.351 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:10:43.351 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:10:43.353 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:10:43.374 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:10:52.973 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:10:54.443 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:10:54.443 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:10:54.443 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:10:54.445 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:10:56.363 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:10:56.364 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:10:56.399 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:10:56.400 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:10:56.414 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:10:56.424 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:10:56.872 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.47 seconds
+2025-01-07 11:10:56.872 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:10:56.872 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:10:56.873 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:10:56.874 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:11:25.842 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-07 11:11:25.843 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:11:25.864 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:11:26.253 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:11:26.368 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:11:26.426 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-01-07 11:13:53.344 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:13:53.385 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:13:53.391 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:13:53.391 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:13:53.391 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:13:53.940 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:13:53.941 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:13:53.942 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:13:53.943 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:13:53.943 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:13:53.944 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:13:53.944 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:13:53.944 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:13:54.057 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:13:54.058 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:13:54.060 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:13:56.351 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:13:56.353 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:13:56.353 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:13:56.353 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:13:56.355 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:13:56.362 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:14:02.822 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:14:04.171 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:14:04.171 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:14:04.171 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:14:04.173 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:14:05.772 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:14:05.772 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:14:05.795 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:14:05.796 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:14:05.825 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:14:05.833 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:14:06.299 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.50 seconds
+2025-01-07 11:16:43.992 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-01-07 11:18:32.925 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:18:32.948 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:18:32.952 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:18:32.952 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:18:32.952 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:18:33.478 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:18:33.479 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:18:33.480 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:18:33.481 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:18:33.481 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:18:33.481 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:18:33.482 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:18:33.482 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:18:33.581 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:18:33.582 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:18:33.582 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:18:35.584 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:18:35.585 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:18:35.585 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:18:35.585 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:18:35.586 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:18:35.593 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:18:37.964 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:18:39.314 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:18:39.314 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:18:39.314 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:18:39.315 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:18:40.463 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:18:40.463 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:18:40.522 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:18:40.523 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:18:40.523 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:18:40.523 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:18:40.718 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.19 seconds
+2025-01-07 11:18:53.855 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:18:53.877 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:18:53.881 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:18:53.881 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:18:53.881 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:18:54.440 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:18:54.441 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:18:54.441 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:18:54.442 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:18:54.442 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:18:54.442 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:18:54.444 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:18:54.444 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:18:54.541 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:18:54.542 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:18:54.542 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:18:56.538 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:18:56.539 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:18:56.539 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:18:56.539 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:18:56.541 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:18:56.719 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:19:00.109 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:19:01.140 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:19:01.140 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:19:01.140 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:19:01.140 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:19:02.288 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:19:02.289 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:19:02.340 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:19:02.341 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:19:02.341 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:19:02.349 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:19:02.563 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.22 seconds
+2025-01-07 11:19:02.563 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:19:02.578 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:19:03.024 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:19:03.106 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:19:14.471 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:19:14.497 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:19:14.501 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:19:14.501 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:19:14.501 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:19:15.084 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:19:15.085 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:19:15.085 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:19:15.086 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:19:15.086 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:19:15.087 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:19:15.087 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:19:15.087 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:19:15.189 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:19:15.190 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:19:15.190 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:19:17.556 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:19:17.557 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:19:17.557 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:19:17.557 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:19:17.558 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:19:17.599 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:19:45.799 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-07 11:19:45.799 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:19:45.810 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:19:46.270 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:19:46.270 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:19:46.341 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-01-07 11:19:53.649 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:19:53.675 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:19:53.678 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:19:53.678 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:19:53.678 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:19:54.221 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:19:54.222 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:19:54.223 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:19:54.224 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:19:54.224 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:19:54.225 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:19:54.225 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:19:54.225 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:19:54.322 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:19:54.323 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:19:54.323 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:19:56.406 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:19:56.410 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:19:56.410 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:19:56.410 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:19:56.412 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:19:56.480 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:20:02.690 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:20:04.219 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:20:04.219 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:20:04.219 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:20:04.219 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:20:05.379 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:20:05.379 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:20:05.458 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:20:05.459 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:20:05.463 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:20:05.500 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:20:05.883 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.42 seconds
+2025-01-07 11:20:05.884 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:20:05.890 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:20:06.253 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:20:06.414 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:27:35.644 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:27:35.649 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:27:35.653 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:27:35.653 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:27:35.653 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:27:36.197 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:27:36.198 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:27:36.198 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:27:36.200 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:27:36.200 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:27:36.201 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:27:36.201 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:27:36.201 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:27:36.310 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:27:36.311 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:27:36.312 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:27:39.462 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:27:39.463 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:27:39.463 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:27:39.463 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:27:39.464 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:27:39.699 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:27:41.359 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:27:42.578 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:27:42.578 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:27:42.578 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:27:42.578 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:27:44.438 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:27:44.438 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:27:44.443 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:27:44.444 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:27:44.444 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:27:44.498 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:27:44.690 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.25 seconds
+2025-01-07 11:27:44.690 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:27:44.708 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:27:45.373 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:27:45.414 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:27:45.520 - RealTimeSTT: root - INFO - Saved frame to D:/Project/Video-Description/ai_modules/images\frame_1.png
+2025-01-07 11:27:45.552 - RealTimeSTT: PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-07 11:27:45.552 - RealTimeSTT: PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2025-01-07 11:27:48.359 - RealTimeSTT: root - INFO - Response from get_llm_out: The person sitting in the chair is in front of the camera.
+2025-01-07 11:28:06.184 - RealTimeSTT: root - INFO - Recording started...
+2025-01-07 11:28:07.834 - RealTimeSTT: root - INFO - Recording stopped. Processing inputs...
+2025-01-07 11:28:07.845 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:28:07.848 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:28:07.851 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:28:07.851 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:28:07.851 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:28:08.416 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:28:08.419 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:28:08.419 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:28:11.799 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:28:11.800 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:28:11.800 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:28:11.800 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:28:11.801 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:28:11.980 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:29:10.170 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-07 11:29:10.170 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:29:10.186 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:29:10.804 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:29:10.804 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:29:10.903 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
+2025-01-07 11:37:52.073 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:37:52.077 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:37:52.081 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:37:52.081 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:37:52.081 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:37:52.686 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:37:52.687 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:37:52.687 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:37:52.689 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:37:52.689 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:37:52.690 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:37:52.690 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:37:52.690 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:37:52.785 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:37:52.785 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:37:52.785 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:37:55.998 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:37:55.999 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:37:55.999 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:37:55.999 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:37:56.000 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:37:56.149 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:38:03.827 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:38:05.298 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:38:05.303 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:38:05.303 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:38:05.303 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:38:06.453 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:38:06.453 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:38:06.497 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:38:06.497 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:38:06.512 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:38:06.512 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:38:06.913 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.42 seconds
+2025-01-07 11:38:06.913 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:38:06.929 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:38:07.609 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:38:07.708 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:38:07.820 - RealTimeSTT: root - INFO - Transcribed text: Hello.
+2025-01-07 11:38:07.828 - RealTimeSTT: root - INFO - Saved frame to D:/Project/Video-Description/ai_modules/images\frame_1.png
+2025-01-07 11:38:07.849 - RealTimeSTT: PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-07 11:38:07.849 - RealTimeSTT: PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2025-01-07 11:38:10.980 - RealTimeSTT: root - INFO - Response from get_llm_out: Hello! It looks like you're in a room. Is there anything specific you'd like to know or discuss?
+2025-01-07 11:38:25.899 - RealTimeSTT: root - INFO - Exiting application...
+2025-01-07 11:38:26.406 - RealTimeSTT: root - INFO - Released resources and closed all windows.
+2025-01-07 11:41:29.892 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:41:29.892 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:41:29.892 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:41:29.892 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:41:29.892 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:41:30.468 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg6
+2025-01-07 11:41:30.468 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg6.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:41:30.472 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg5
+2025-01-07 11:41:30.472 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg5.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:41:30.473 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg4
+2025-01-07 11:41:30.473 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torch\_ops.py", line 1350, in load_library
+    ctypes.CDLL(path)
+  File "D:\anaconda3\envs\llmenv\lib\ctypes\__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+FileNotFoundError: Could not find module 'D:\anaconda3\envs\llmenv\Lib\site-packages\torio\lib\libtorio_ffmpeg4.pyd' (or one of its dependencies). Try using the full path with constructor syntax.
+2025-01-07 11:41:30.473 - RealTimeSTT: torio._extension.utils - DEBUG - Loading FFmpeg
+2025-01-07 11:41:30.474 - RealTimeSTT: torio._extension.utils - DEBUG - Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+  File "D:\anaconda3\envs\llmenv\lib\site-packages\torio\_extension\utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+2025-01-07 11:41:30.589 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:41:30.589 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:41:30.589 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:41:33.854 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:41:33.854 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:41:33.854 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:41:33.854 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:41:33.854 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:41:34.093 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:41:39.404 - RealTimeSTT: root - INFO - State changed from 'wakeword' to 'listening'
+2025-01-07 11:41:40.683 - RealTimeSTT: root - INFO - voice activity detected
+2025-01-07 11:41:40.683 - RealTimeSTT: root - INFO - recording started
+2025-01-07 11:41:40.683 - RealTimeSTT: root - INFO - State changed from 'listening' to 'recording'
+2025-01-07 11:41:40.684 - RealTimeSTT: root - DEBUG - Waiting for recording stop
+2025-01-07 11:41:41.950 - RealTimeSTT: root - INFO - recording stopped
+2025-01-07 11:41:41.950 - RealTimeSTT: root - INFO - State changed from 'recording' to 'inactive'
+2025-01-07 11:41:42.040 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'transcribing'
+2025-01-07 11:41:42.041 - RealTimeSTT: root - DEBUG - Adding transcription request, no early transcription started
+2025-01-07 11:41:42.064 - RealTimeSTT: root - DEBUG - Receive from parent_transcription_pipe after sendiung transcription request, transcribe_count: 1
+2025-01-07 11:41:42.092 - RealTimeSTT: root - INFO - State changed from 'transcribing' to 'inactive'
+2025-01-07 11:41:42.514 - RealTimeSTT: root - DEBUG - Model tiny completed transcription in 0.47 seconds
+2025-01-07 11:41:42.514 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:41:42.528 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:41:43.120 - RealTimeSTT: root - DEBUG - Terminating transcription process
+2025-01-07 11:41:43.277 - RealTimeSTT: root - DEBUG - Finishing realtime thread
+2025-01-07 11:41:43.396 - RealTimeSTT: root - INFO - Transcribed text: Hello, how are you?
+2025-01-07 11:41:43.404 - RealTimeSTT: root - INFO - Saved frame to D:/Project/Video-Description/ai_modules/images\frame_1.png
+2025-01-07 11:41:43.421 - RealTimeSTT: PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-07 11:41:43.421 - RealTimeSTT: PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2025-01-07 11:41:47.378 - RealTimeSTT: root - INFO - Response from get_llm_out: Hello! I'm just a computer program, so I don't have feelings. How can I assist you today?
+2025-01-07 11:41:50.995 - RealTimeSTT: root - INFO - Recording started...
+2025-01-07 11:41:52.651 - RealTimeSTT: root - INFO - Recording stopped. Processing inputs...
+2025-01-07 11:41:52.651 - RealTimeSTT: root - INFO - Capturing and processing frame...
+2025-01-07 11:41:52.678 - RealTimeSTT: root - INFO - Starting RealTimeSTT
+2025-01-07 11:41:52.682 - RealTimeSTT: root - INFO - Initializing audio recording (creating pyAudio input stream, sample rate: 16000 buffer size: 512
+2025-01-07 11:41:52.686 - RealTimeSTT: root - DEBUG - Porcupine wake word detection engine initialized successfully
+2025-01-07 11:41:52.686 - RealTimeSTT: root - INFO - Initializing WebRTC voice with Sensitivity 3
+2025-01-07 11:41:52.686 - RealTimeSTT: root - DEBUG - WebRTC VAD voice activity detection engine initialized successfully
+2025-01-07 11:41:53.240 - RealTimeSTT: root - DEBUG - Silero VAD voice activity detection engine initialized successfully
+2025-01-07 11:41:53.240 - RealTimeSTT: root - DEBUG - Starting realtime worker
+2025-01-07 11:41:53.241 - RealTimeSTT: root - DEBUG - Waiting for main transcription model to start
+2025-01-07 11:41:57.139 - RealTimeSTT: root - DEBUG - Main transcription model ready
+2025-01-07 11:41:57.139 - RealTimeSTT: root - DEBUG - RealtimeSTT initialization completed successfully
+2025-01-07 11:41:57.139 - RealTimeSTT: root - INFO - Setting listen time
+2025-01-07 11:41:57.139 - RealTimeSTT: root - INFO - State changed from 'inactive' to 'listening'
+2025-01-07 11:41:57.139 - RealTimeSTT: root - DEBUG - Waiting for recording start
+2025-01-07 11:41:57.204 - RealTimeSTT: root - INFO - State changed from 'listening' to 'wakeword'
+2025-01-07 11:42:26.715 - RealTimeSTT: root - INFO - KeyboardInterrupt in wait_audio, shutting down
+2025-01-07 11:42:26.715 - RealTimeSTT: root - DEBUG - Finishing recording thread
+2025-01-07 11:42:26.734 - RealTimeSTT: root - DEBUG - Terminating reader process
+2025-01-07 11:42:26.773 - RealTimeSTT: root - DEBUG - Receive from stdout pipe
+2025-01-07 11:42:26.993 - RealTimeSTT: root - INFO - KeyboardInterrupt in text() method
