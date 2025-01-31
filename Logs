@@ -12,3 +12,160 @@
 11:45:37,283 root ERROR Error in AudioToTextRecorder: name 'AudioToTextRecorder' is not defined
 11:45:37,283 root INFO Transcribed text: None
 11:45:37,283 root WARNING No transcribed text available.
+10:45:05,681 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+10:46:40,110 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+10:47:39,848 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+10:48:38,817 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:00:51,47 root INFO Starting live feed with speech...
+11:00:51,47 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:00:51,47 root INFO Directories checked successfully.
+11:00:51,47 root INFO Initializing model and prompt...
+11:00:51,876 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:00:56,724 root INFO Model and prompt initialized successfully.
+11:00:57,148 root INFO Listening for speech...
+11:01:05,258 root INFO Recording started...
+11:01:05,444 root INFO Recording stopped. Processing inputs...
+11:01:05,444 root INFO Capturing and processing frame...
+11:01:05,481 root INFO Initializing AudioToTextRecorder...
+11:01:10,461 root INFO Initializing faster_whisper main transcription model tiny
+11:01:11,95 root INFO Microphone connected and validated (input_device_index: 1)
+11:01:20,103 faster_whisper INFO Detected language 'en' with probability 0.92
+11:03:18,750 root INFO Starting live feed with speech...
+11:03:18,750 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:03:18,750 root INFO Directories checked successfully.
+11:03:18,750 root INFO Initializing model and prompt...
+11:03:19,581 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:03:24,684 root INFO Model and prompt initialized successfully.
+11:03:25,29 root INFO Listening for speech...
+11:03:28,452 root INFO Recording started...
+11:03:29,934 root INFO Recording stopped. Processing inputs...
+11:03:29,934 root INFO Capturing and processing frame...
+11:03:29,941 root INFO Initializing AudioToTextRecorder...
+11:03:33,529 root INFO Initializing faster_whisper main transcription model tiny
+11:03:34,103 root INFO Microphone connected and validated (input_device_index: 1)
+11:03:39,746 faster_whisper INFO Detected language 'en' with probability 0.92
+11:45:55,697 root INFO Initializing faster_whisper main transcription model tiny
+11:45:56,274 root INFO Microphone connected and validated (input_device_index: 1)
+11:46:00,630 faster_whisper INFO Detected language 'en' with probability 0.37
+11:46:17,627 root INFO Starting live feed with speech...
+11:46:17,627 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:46:17,627 root INFO Directories checked successfully.
+11:46:17,627 root INFO Initializing model and prompt...
+11:46:19,66 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:46:24,797 root INFO Model and prompt initialized successfully.
+11:46:25,203 root INFO Listening for speech...
+11:46:27,253 root INFO Recording started...
+11:46:30,579 root INFO Recording stopped. Processing inputs...
+11:46:30,579 root INFO Capturing and processing frame...
+11:46:35,732 root INFO Initializing faster_whisper main transcription model tiny
+11:46:36,373 root INFO Microphone connected and validated (input_device_index: 1)
+11:46:40,725 faster_whisper INFO Detected language 'en' with probability 0.54
+11:48:02,134 root INFO Starting live feed with speech...
+11:48:02,134 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:48:02,134 root INFO Directories checked successfully.
+11:48:02,134 root INFO Initializing model and prompt...
+11:48:02,961 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:48:07,580 root INFO Model and prompt initialized successfully.
+11:48:07,922 root INFO Listening for speech...
+11:48:10,836 root INFO Recording started...
+11:48:10,963 root INFO Recording stopped. Processing inputs...
+11:48:10,963 root INFO Capturing and processing frame...
+11:48:15,950 root INFO Initializing faster_whisper main transcription model tiny
+11:48:16,611 root INFO Microphone connected and validated (input_device_index: 1)
+11:48:19,857 faster_whisper INFO Detected language 'en' with probability 0.72
+11:49:37,344 root INFO Starting live feed with speech...
+11:49:37,344 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:49:37,344 root INFO Directories checked successfully.
+11:49:37,344 root INFO Initializing model and prompt...
+11:49:38,171 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:49:42,577 root INFO Model and prompt initialized successfully.
+11:49:42,954 root INFO Listening for speech...
+11:49:45,241 root INFO Recording started...
+11:49:45,399 root INFO Recording stopped. Processing inputs...
+11:49:45,399 root INFO Capturing and processing frame...
+11:49:49,170 root INFO Initializing faster_whisper main transcription model tiny
+11:49:49,784 root INFO Microphone connected and validated (input_device_index: 1)
+11:49:52,147 faster_whisper INFO Detected language 'en' with probability 0.50
+11:51:02,945 root INFO Initializing faster_whisper main transcription model tiny
+11:51:03,604 root INFO Microphone connected and validated (input_device_index: 1)
+11:51:10,707 faster_whisper INFO Detected language 'en' with probability 0.83
+11:52:13,593 root INFO Starting live feed with speech...
+11:52:13,593 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:52:13,593 root INFO Directories checked successfully.
+11:52:13,593 root INFO Initializing model and prompt...
+11:52:14,403 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:52:18,915 root INFO Model and prompt initialized successfully.
+11:52:19,250 root INFO Listening for speech...
+11:52:21,123 root INFO Recording started...
+11:52:21,521 root INFO Recording stopped. Processing inputs...
+11:52:21,521 root INFO Capturing and processing frame...
+11:52:25,775 root INFO Initializing faster_whisper main transcription model tiny
+11:52:26,407 root INFO Microphone connected and validated (input_device_index: 1)
+11:52:29,965 faster_whisper INFO Detected language 'en' with probability 0.34
+10:19:57,575 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+10:19:57,576 root INFO Directories checked successfully.
+10:19:57,576 root INFO Initializing model and prompt...
+10:20:17,769 root INFO Resources released and program terminated.
+10:20:57,375 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+10:20:57,375 root INFO Directories checked successfully.
+10:20:57,375 root INFO Initializing model and prompt...
+10:30:32,267 huggingface_hub.file_download WARNING Error while downloading from https://cdn-lfs-us-1.hf.co/repos/7d/31/7d310a74f7c61cc85bfbb447270b97a5fff45d2d04d20faa0359b67b1dbdb4af/381e110d74db594cc24956af0e74a01ae02104497113a78926990c5bd1f395f6?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00004-of-00005.safetensors%3B+filename%3D%22model-00004-of-00005.safetensors%22%3B&Expires=1737088289&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczNzA4ODI4OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzdkLzMxLzdkMzEwYTc0ZjdjNjFjYzg1YmZiYjQ0NzI3MGI5N2E1ZmZmNDVkMmQwNGQyMGZhYTAzNTliNjdiMWRiZGI0YWYvMzgxZTExMGQ3NGRiNTk0Y2MyNDk1NmFmMGU3NGEwMWFlMDIxMDQ0OTcxMTNhNzg5MjY5OTBjNWJkMWYzOTVmNj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=H0l0Q4grkn6LF3U5PXCxJtYy2VeFbkAjAdAFzLFTU%7ELdxEuHcctUdbf1nhKy82NlItnJPBWRNpu8iMsmUHKXr17N6RhxEkSGVkU70xk7GPPMZChlySh7KxRhd4oHD6Eq-2CdvvpJrTNennb%7Eqaeh14l9Ez-aBxij8krCBLIH7TcvNABp1GRMmdUscJ7ypuAJ77qp179j-gZxJ4NkZEAy2mKgGiIzFqNc4m4vWwID%7E1omAQdIShmEsfUhE9Y21C6ONlofE5RjqAxRkkkv3YhQl7cuVZtP2ECmBd3Y9sNry3SONB15D7QBFh1fSzD2ooiZn82y88ytS3PjN5%7ELEH7dKA__&Key-Pair-Id=K24J24Z295AEI9: HTTPSConnectionPool(host='cdn-lfs-us-1.hf.co', port=443): Read timed out.
+Trying to resume download...
+10:30:33,454 root ERROR An error occurred while initializing the model: (MaxRetryError('HTTPSConnectionPool(host=\'cdn-lfs-us-1.hf.co\', port=443): Max retries exceeded with url: /repos/7d/31/7d310a74f7c61cc85bfbb447270b97a5fff45d2d04d20faa0359b67b1dbdb4af/381e110d74db594cc24956af0e74a01ae02104497113a78926990c5bd1f395f6?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00004-of-00005.safetensors%3B+filename%3D%22model-00004-of-00005.safetensors%22%3B&Expires=1737088289&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczNzA4ODI4OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzdkLzMxLzdkMzEwYTc0ZjdjNjFjYzg1YmZiYjQ0NzI3MGI5N2E1ZmZmNDVkMmQwNGQyMGZhYTAzNTliNjdiMWRiZGI0YWYvMzgxZTExMGQ3NGRiNTk0Y2MyNDk1NmFmMGU3NGEwMWFlMDIxMDQ0OTcxMTNhNzg5MjY5OTBjNWJkMWYzOTVmNj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=H0l0Q4grkn6LF3U5PXCxJtYy2VeFbkAjAdAFzLFTU~LdxEuHcctUdbf1nhKy82NlItnJPBWRNpu8iMsmUHKXr17N6RhxEkSGVkU70xk7GPPMZChlySh7KxRhd4oHD6Eq-2CdvvpJrTNennb~qaeh14l9Ez-aBxij8krCBLIH7TcvNABp1GRMmdUscJ7ypuAJ77qp179j-gZxJ4NkZEAy2mKgGiIzFqNc4m4vWwID~1omAQdIShmEsfUhE9Y21C6ONlofE5RjqAxRkkkv3YhQl7cuVZtP2ECmBd3Y9sNry3SONB15D7QBFh1fSzD2ooiZn82y88ytS3PjN5~LEH7dKA__&Key-Pair-Id=K24J24Z295AEI9 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000215EB263AC0>: Failed to resolve \'cdn-lfs-us-1.hf.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 54314e53-1bb8-4510-a8ed-d4c81b050616)')
+10:30:33,454 root ERROR Unexpected error: (MaxRetryError('HTTPSConnectionPool(host=\'cdn-lfs-us-1.hf.co\', port=443): Max retries exceeded with url: /repos/7d/31/7d310a74f7c61cc85bfbb447270b97a5fff45d2d04d20faa0359b67b1dbdb4af/381e110d74db594cc24956af0e74a01ae02104497113a78926990c5bd1f395f6?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27model-00004-of-00005.safetensors%3B+filename%3D%22model-00004-of-00005.safetensors%22%3B&Expires=1737088289&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTczNzA4ODI4OX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmhmLmNvL3JlcG9zLzdkLzMxLzdkMzEwYTc0ZjdjNjFjYzg1YmZiYjQ0NzI3MGI5N2E1ZmZmNDVkMmQwNGQyMGZhYTAzNTliNjdiMWRiZGI0YWYvMzgxZTExMGQ3NGRiNTk0Y2MyNDk1NmFmMGU3NGEwMWFlMDIxMDQ0OTcxMTNhNzg5MjY5OTBjNWJkMWYzOTVmNj9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSoifV19&Signature=H0l0Q4grkn6LF3U5PXCxJtYy2VeFbkAjAdAFzLFTU~LdxEuHcctUdbf1nhKy82NlItnJPBWRNpu8iMsmUHKXr17N6RhxEkSGVkU70xk7GPPMZChlySh7KxRhd4oHD6Eq-2CdvvpJrTNennb~qaeh14l9Ez-aBxij8krCBLIH7TcvNABp1GRMmdUscJ7ypuAJ77qp179j-gZxJ4NkZEAy2mKgGiIzFqNc4m4vWwID~1omAQdIShmEsfUhE9Y21C6ONlofE5RjqAxRkkkv3YhQl7cuVZtP2ECmBd3Y9sNry3SONB15D7QBFh1fSzD2ooiZn82y88ytS3PjN5~LEH7dKA__&Key-Pair-Id=K24J24Z295AEI9 (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000215EB263AC0>: Failed to resolve \'cdn-lfs-us-1.hf.co\' ([Errno 11001] getaddrinfo failed)"))'), '(Request ID: 54314e53-1bb8-4510-a8ed-d4c81b050616)')
+10:30:33,454 root INFO Resources released and program terminated.
+11:40:52,847 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:40:52,847 root INFO Directories checked successfully.
+11:40:52,847 root INFO Initializing model and prompt...
+11:40:54,509 root ERROR An error occurred while initializing the model: Qwen/Qwen2-VL-7B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+11:40:54,509 root ERROR Unexpected error: Qwen/Qwen2-VL-7B-Instruct is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+11:40:54,511 root INFO Resources released and program terminated.
+11:42:11,827 root INFO Checking directories: D:/Project/Video-Description/ai_modules/images, D:\Project\Video-Description\system_prompt.txt
+11:42:11,827 root INFO Directories checked successfully.
+11:42:11,827 root INFO Initializing model and prompt...
+11:44:21,714 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+11:44:44,795 root INFO Model and prompt initialized successfully.
+11:44:46,374 root INFO Camera initialized successfully.
+11:44:50,281 root INFO Initializing faster_whisper main transcription model tiny
+11:44:50,602 root INFO Microphone connected and validated (input_device_index: 1)
+11:44:56,760 faster_whisper INFO Detected language 'en' with probability 0.94
+11:45:01,57 root INFO Initializing faster_whisper main transcription model tiny
+11:45:01,393 root INFO Microphone connected and validated (input_device_index: 1)
+11:45:08,862 faster_whisper INFO Detected language 'en' with probability 0.79
+11:45:13,153 root INFO Initializing faster_whisper main transcription model tiny
+11:45:13,473 root INFO Microphone connected and validated (input_device_index: 1)
+12:35:02,220 accelerate.utils.modeling INFO We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+12:35:10,663 __main__ INFO Model and processor initialized successfully
+12:35:10,664 __main__ INFO Camera feed capture started in background thread
+12:35:14,21 root INFO Initializing faster_whisper main transcription model tiny
+12:35:14,336 root INFO Microphone connected and validated (input_device_index: 1)
+12:35:20,71 faster_whisper INFO Detected language 'fr' with probability 0.16
+12:35:27,159 root INFO Initializing faster_whisper main transcription model tiny
+12:35:27,480 root INFO Microphone connected and validated (input_device_index: 1)
+12:35:31,948 faster_whisper INFO Detected language 'en' with probability 0.79
+12:35:39,565 root INFO Initializing faster_whisper main transcription model tiny
+12:35:39,880 root INFO Microphone connected and validated (input_device_index: 1)
+12:35:44,482 faster_whisper INFO Detected language 'en' with probability 0.94
+12:35:53,490 root INFO Initializing faster_whisper main transcription model tiny
+12:35:53,816 root INFO Microphone connected and validated (input_device_index: 1)
+12:35:58,371 faster_whisper INFO Detected language 'en' with probability 0.60
+12:36:07,792 root INFO Initializing faster_whisper main transcription model tiny
+12:36:08,112 root INFO Microphone connected and validated (input_device_index: 1)
+12:36:13,307 faster_whisper INFO Detected language 'hi' with probability 0.58
+12:36:19,189 root INFO Initializing faster_whisper main transcription model tiny
+12:36:19,505 root INFO Microphone connected and validated (input_device_index: 1)
+12:36:21,269 faster_whisper INFO Detected language 'en' with probability 0.97
+12:36:28,950 root INFO Initializing faster_whisper main transcription model tiny
+12:36:29,288 root INFO Microphone connected and validated (input_device_index: 1)
+12:36:41,421 faster_whisper INFO Detected language 'en' with probability 0.85
+12:36:49,436 root INFO Initializing faster_whisper main transcription model tiny
+12:36:49,761 root INFO Microphone connected and validated (input_device_index: 1)
+12:36:54,133 faster_whisper INFO Detected language 'en' with probability 0.90
+12:37:02,324 root INFO Initializing faster_whisper main transcription model tiny
+12:37:02,650 root INFO Microphone connected and validated (input_device_index: 1)
+12:37:05,364 faster_whisper INFO Detected language 'en' with probability 0.81
+12:37:12,777 root INFO Initializing faster_whisper main transcription model tiny
+12:37:13,89 root INFO Microphone connected and validated (input_device_index: 1)
+12:37:17,900 faster_whisper INFO Detected language 'hi' with probability 0.35

@@ -11,12 +11,12 @@ import warnings
 
 warnings.filterwarnings("ignore")
 logging.basicConfig(
-                    filename="Logs",
-                    filemode='a',
-                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
-                    level=logging.INFO
-                    )
+    filename="Logs",
+    filemode="a",
+    format="%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s",
+    datefmt="%H:%M:%S",
+    level=logging.INFO,
+)
 
 
 def read_sys_prompt(file_path):
@@ -42,7 +42,7 @@ def init_model():
     # Load the model with 8-bit precision
     try:
         model = Qwen2VLForConditionalGeneration.from_pretrained(
-            "Qwen/Qwen2-VL-2B-Instruct",
+            "Qwen/Qwen2-VL-7B-Instruct",
             torch_dtype="auto",
             device_map="auto",
             quantization_config=bnb_config,
@@ -79,20 +79,31 @@ def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
     if not os.path.exists(image):
         logging.error(f"Image file does not exist: {image}")
         return "Image file not found."
-    
-    messages = [
-        {"role": "system", "content": sys_prompt},
-        {
-            "role": "user",
-            "content": [
-                {
-                    "type": "image",
-                    "image": image,
-                },
-                {"type": "text", "text": text},
-            ],
-        },
-    ]
+
+    if image:
+        messages = [
+            {"role": "system", "content": sys_prompt},
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "image",
+                        "image": image,
+                    },
+                    {"type": "text", "text": text},
+                ],
+            },
+        ]
+    else:
+        messages = [
+            {"role": "system", "content": sys_prompt},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": text},
+                ],
+            },
+        ]
 
     try:
         # Process the text using the processor
@@ -133,12 +144,10 @@ def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
     return output_text
 
 
-# # Example Usage
+# Example Usage
 # if __name__ == "__main__":
 #     # Read the system prompt
-#     sys_prompt = read_sys_prompt(
-#         "D:\Project\Video-Description\system_prompt.txt"
-#     )
+#     sys_prompt = read_sys_prompt("D:\Project\Video-Description\system_prompt.txt")
 
 #     # Initialize the model and processor
 #     model, processor, device = init_model()
@@ -149,7 +158,7 @@ def get_llm_out(model, processor, device, sys_prompt, image, text) -> str:
 #         processor,
 #         device,
 #         sys_prompt,
-#         r"C:\Users\vibhu\Downloads\wallpapers\wp12796311-porsche-911-gt3-rs-4k-wallpapers.jpg",
-#         "Do you see a car in this image?",
+#         r"D:\Project\Video-Description\ai_modules\images\captured_image.jpg",
+#         "Hello",
 #     )
 #     print(result)
