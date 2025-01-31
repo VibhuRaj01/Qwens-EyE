@@ -148,6 +148,6 @@ if __name__ == "__main__":
     app.start_camera_capture()
     try:
         app.main_loop()
-    except KeyboardInterrupt as e:
+    except KeyboardInterrupt:
         print("\nApplication stopped by user")
         app.stop_camera_capture()
