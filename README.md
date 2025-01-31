@@ -29,6 +29,6 @@ cd vision-llm
 ```
 - Running the Program
 ```bash
-python main.py
+python driver.py
 ```
 
